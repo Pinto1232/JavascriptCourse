@@ -151,11 +151,11 @@ do{
 // nested for loop = repeat some code a 
 //          certain amount of times
 
-for (let counter = 0; counter <= 34; counter+=1) {
-    for (let j = 0; j <= 15; j+=1) {
+for (let counter = 0; counter <= 34; counter += 1) {
+    for (let j = 0; j <= 15; j += 1) {
         document.getElementById("counter").innerHTML = j
-    }  
-    document.getElementById("counter").innerHTML = counter  
+    }
+    document.getElementById("counter").innerHTML = counter
 }
 
 
@@ -169,12 +169,35 @@ const StartProgram = () => {
 
 
 const happyBirthDay = (userNameTwo, ageTwo) => {
-    let greeting = window.prompt("Greeting for the heart")
-    let inputName = window.prompt("What is your Name", userNameTwo)
-    let inputAge = window.prompt("Your age is", ageTwo)
-    console.log(greeting);
-    console.log("Your name is",inputName);
-    inputAge = Number(inputAge)    
-    console.log("Your age is", inputAge);
+    /*  let greeting = window.prompt("Greeting for the heart")
+     let inputName = window.prompt("What is your Name", userNameTwo)
+     let inputAge = window.prompt("Your age is", ageTwo)
+     console.log(greeting);
+     console.log("Your name is",inputName);
+     inputAge = Number(inputAge)    
+     console.log("Your age is", inputAge); */
 }
 StartProgram()
+
+
+// return = returns a value back to place
+//           where you invoked a function
+
+
+let area;
+let width;
+let height;
+
+
+width = window.prompt("Enter width")
+height = window.prompt("Enter height")
+
+const getArea = (width, height) => {
+    let result = width * height
+    return result
+}
+
+area = getArea(width, height)
+console.log("The area is ", area);
+
+
