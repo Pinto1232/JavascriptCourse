@@ -1,0 +1,66 @@
+.form-block{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #11114e;
+    padding: 50px;
+    margin: 10 auto;
+    border-radius:4px;
+}
+.form-block input{
+    margin-top: 10px;
+    padding: 15px;
+    outline: none;
+    border: none;
+}
+
+.btnSumit {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: blue; 
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 4px;
+    width: 400px;
+    max-width: 100%;
+}
+
+label {
+    margin-top: 5px;
+    color: white;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.txtEmployee{
+    color: white;
+    text-transform: capitalize;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.checkMore{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+}
+
+.checkMore .btnLearMore{
+    padding: 10px;
+    font-size: 20px;
+    background-color: blue;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    width: 200px;
+    max-width: 100%;
+}
+
+.txtPayment{
+    color: white;
+}
+.payment{
+    gap: 20px;
+}

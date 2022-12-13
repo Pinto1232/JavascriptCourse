@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,51 @@
     <link rel="stylesheet" href="style.css">
     <title>Javascript Tutorial</title>
 </head>
-<body>
-    
-    
 
+<body>
+
+    <div class="form-block">
+        <div class="checkMore">
+            <div>
+                <h2 class="txtEmployee">Employee Equity Form</h2>
+            </div>
+            <div>
+                <button class="btnLearMore">learn more</button>
+            </div>
+        </div>
+        <label id="lblName">Enter name</label>
+        <input id="textName" type="text">
+
+        <label id="lblSurname">Enter surname</label>
+        <input id="txtSurname" type="text">
+
+        <label id="lblAge">Enger age</label>
+        <input id="txtAge" type="text">
+        <label id="ageDisplay"></label>
+
+        <label id="lblProfession">Enter Profession</label>
+        <input id="txtProfession" type="text">
+
+        <label id="lblEmail">Enter email</label>
+        <input id="txtEmail" type="email">
+        <label id="lblDisplayEmail"></label>
+
+
+        <div class="payment">
+            <h2 class="txtPayment">Payment method</h2>
+            
+            <label for="visaPayment">Visa Payments</label>
+            <input id="visaPayment" type="checkbox">
+            <label for="masterCardPayment">Master card Payments</label>
+            <input id="masterCardPayment" type="checkbox">
+            <label for="paypalPayment">Paypal Payments</label>
+            <input id="paypalPayment" type="checkbox">
+        </div>
+
+        <label id="counter"></label>
+        <button class="btnSumit" id="btnSubmit">Submit</button>
+    </div>
     <script src="index.js"></script>
 </body>
+
 </html>
