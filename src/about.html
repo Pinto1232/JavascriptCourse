@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/index.css">
+    <title>Javascript course 2</title>
+</head>
+<body>
+    
+    <form action="">
+        <div class="main-form">
+            <h2>Payment Process</h2>
+            <label id="lblFirstName" for="firstName">Name</label>
+            <input id="firstName" type="text" placeholder="Name">
+            <label id="lblLastName" for="lastName">Surname</label>
+            <input id="lastName" type="text" placeholder="Surname">
+            <h3>Payments</h3>
+            <div class="inputRadio">
+                <label id="lblVisa" for="paymentVisa">Visa</label>
+                <input id="paymentVisa" type="radio">
+                <label id="lblPaypal" for="paymentPaypal">Paypal</labe>
+                <input id="paymentPaypal" type="radio" >
+            </div>
+            <label id="lblError"></label>
+        </div>
+        <input id="submitButton" class="btnSubmit" type="submit" value="submit">
+    </form>
+
+    <script src="../src/index.js"></script>
+</body>
+</html>

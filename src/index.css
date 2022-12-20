@@ -1,0 +1,51 @@
+ul li{
+    font-size: 30px;
+    text-decoration: none;
+    text-decoration-style: none;
+    color: blue;
+}
+
+form{
+    padding: 20px;
+    background-color: blueviolet;
+    color: #fff;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, .25);
+}
+.main-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-form input{
+    margin-top: 10px;
+    height: 2em;
+    margin-bottom: 10px;
+    padding: 6px;
+}
+
+.btnSubmit{
+    margin-top: 10px;
+    padding: 10px;
+    width: 300px;
+    max-width: 100%;
+    font-size: 18px;
+    text-transform: capitalize;
+    background-color: blue;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06);
+    transition: all 0.15s ease-out;
+}
+
+.inputRadio input{
+    width: 3%;
+}
+.inputRadio label{
+    font-size: 18px;
+}
+
+.btnSubmit:hover{
+    background-color: red;
+}

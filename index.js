@@ -151,12 +151,12 @@ do{
 // nested for loop = repeat some code a 
 //          certain amount of times
 
-for (let counter = 0; counter <= 34; counter += 1) {
+/* for (let counter = 0; counter <= 34; counter += 1) {
     for (let j = 0; j <= 15; j += 1) {
         document.getElementById("counter").innerHTML = j
     }
     document.getElementById("counter").innerHTML = counter
-}
+} */
 
 
 // Function = define code once and use it anywhere
@@ -184,7 +184,7 @@ StartProgram()
 //           where you invoked a function
 
 
-let area;
+/* let area;
 let width;
 let height;
 
@@ -198,6 +198,61 @@ const getArea = (width, height) => {
 }
 
 area = getArea(width, height)
-console.log("The area is ", area);
+console.log("The area is ", area); */
+
+
+
+// Playing with variables
+
+let myFirstname = "Pinto";
+let myLastName = "Manue";
+let myAge = 35;
+let Enrolled = false;
+
+console.log("My firstname is", myFirstname);
+console.log("My Lastname is", myLastName);
+console.log("My Age is", myAge);
+console.log("This student is", Enrolled);
+
+/* document.getElementById("p1").innerHTML = "Your First name is " + myFirstname
+
+ */
+
+
+
+
+/* Guesses 2 */
+let temp2 = 45;
+document.getElementById("SubmitGuessBtn2").onclick = (e) => {
+    e.preventDefault()
+    console.log(e.target);
+
+    let temp2;
+
+    if (document.getElementById("cButton2").checked) {
+        temp2 = document.getElementById("txtGuesses2").value;
+        temp2 = Number(temp2)
+        temp2 = convCelcius(temp2)
+        document.getElementById("guess2").innerHTML = "Tempture is " + temp2 + ""
+    }
+    else if (document.getElementById("fButton2").checked) {
+        temp2 = document.getElementById("txtGuesses2").value;
+        temp2 = Number(temp2)
+        temp2 = convFahrenheit(temp2)
+        document.getElementById("guess2").innerHTML = "Tempture is " + temp2 + " F"
+    }
+    else {
+        document.getElementById("guess3").innerHTML = "Please select a # from 0 to 10"
+    }
+
+}
+
+const convCelcius = (temp2) => {
+    return (temp2 - 9) * (5 / 32)
+}
+
+const convFahrenheit = (temp2) => {
+    return temp2 * 9 / 5 + 32;
+}
 
 

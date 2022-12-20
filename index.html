@@ -40,18 +40,68 @@
 
         <div class="payment">
             <h2 class="txtPayment">Payment method</h2>
-            
-            <label for="visaPayment">Visa Payments</label>
-            <input id="visaPayment" type="checkbox">
-            <label for="masterCardPayment">Master card Payments</label>
-            <input id="masterCardPayment" type="checkbox">
-            <label for="paypalPayment">Paypal Payments</label>
-            <input id="paypalPayment" type="checkbox">
-        </div>
 
-        <label id="counter"></label>
+            <div class="block-payment">
+                <label for="visaPayment">Visa Payments</label>
+                <input id="visaPayment" type="checkbox">
+                <label for="masterCardPayment">Master card Payments</label>
+                <input id="masterCardPayment" type="checkbox">
+                <label for="paypalPayment">Paypal Payments</label>
+                <input id="paypalPayment" type="checkbox">
+            </div>
+        </div>
         <button class="btnSumit" id="btnSubmit">Submit</button>
+
+
+        <!-- Guesses App 2-->
+        <form class="form-game2" action="">
+            <h2>Number Guesses Game</h2>
+            <p>Pick a # between 1 - 10</p>
+
+            <div class="degreeConversion2">
+                <label class="lbldegree" for="cButton2"># in celcious</label>
+                <input id="cButton2" type="radio">
+                <label class="lbldegree" for="fButton2"># in faranhents</label>
+                <input id="fButton2" type="radio">
+            </div>
+
+            <div class="txtBlock2">
+                <div>
+                    <label for="">Enter a guess</label>
+                </div>
+                <div class="max-width2">
+                    <input id="txtGuesses2" type="text">
+                </div>
+                <label class="lblguess2" id="guess2"></label>
+                <label class="lblguess3" id="guess3"></label>
+            </div>
+
+            <input id="SubmitGuessBtn2" value="submit" type="submit">
+        </form>
     </div>
+
+
+    <!-- Executable form  -->
+    <select name="" id="main-executable-form">
+         <h2 class="txtExecutable">Executable Form</h2>
+         <div class="Form-Executable">
+              <input type="text" placeholder="Hold Executable">
+              <input type="text" placeholder="Hold Executable2">
+              <input type="text" placeholder="Hold Executable3">
+              <input type="text" placeholder="Hold Executable4">
+              <input type="text" placeholder="Hold Executable5">
+              <input type="text" placeholder="Hold Executable6">
+              <input type="text" placeholder="Hold Executable7">
+              <input type="text" placeholder="Hold Executable8">
+              <input type="text" placeholder="Hold Executable9">
+              <input type="text" placeholder="Hold Executable10">
+              <input type="text" placeholder="Hold Executable11">
+              <input type="text" placeholder="Hold Executable12">z
+         </div>
+    </select>
+    <!--End Executable form  -->
+
+
     <script src="index.js"></script>
 </body>
 
