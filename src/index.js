@@ -57,6 +57,7 @@ let firstName;
 let Surname;
 let paymentVisa;
 let paymentPaypal;
+let myAge;
 
 
 let btnSubmit = document.getElementById("submitButton").onclick = (event) => {
@@ -69,6 +70,11 @@ let btnSubmit = document.getElementById("submitButton").onclick = (event) => {
    console.log(Surname);
    document.getElementById("lblLastName").innerHTML = Surname;
 
+   myAge = document.getElementById("yourAge").value;
+   myAge = Number(myAge)
+   myAge += 1;
+   console.log(myAge);
+   document.getElementById("lblAge").innerHTML = myAge;
 
    const paymentVisa = document.getElementById("paymentVisa")
    console.log("Payment Visa", paymentVisa);
@@ -85,9 +91,160 @@ let btnSubmit = document.getElementById("submitButton").onclick = (event) => {
       document.getElementById("lblError").innerHTML = "You are paying with paypal", paymentPaypal;
       console.log("You are paying with paypal");
    }
+   if (myAge <= 18) {
+      document.getElementById("lblError2").innerHTML = "Your age does not comply with requirement", myAge;
+      console.log("Please insert a required age");
+   }
    else {
       document.getElementById("lblError").innerHTML = "Please select payment method"
       console.log("Please select payment method");
    }
 
 }
+
+
+//    Type Conversion
+
+/* let myAges = window.prompt("How old are you?")
+myAges = Number(myAges)
+myAges += 1
+console.log("My age is ", myAges);  */
+
+
+/* Arrays */
+
+
+
+
+
+
+const StudentCall = (e) => {
+   console.log(e);
+   const Students = [
+      {
+         id: 0,
+         label: "Company",
+         StudentName: "Pinto",
+         StudentSurname: "Manuel",
+         StudetnAge: "20",
+         StudentCourse: "Information Technology",
+         StudentNumberSubject: "12",
+         StudentMarkAverage: "50",
+         StudentPass: true,
+         StudentFail: false,
+         image: "./assets/car1.webp"
+      },
+      {
+         id: 1,
+         label: "Company",
+         StudentName: "Mascode",
+         StudentSurname: "Teresa",
+         StudetnAge: "20",
+         StudentCourse: "Information Technology",
+         StudentNumberSubject: "12",
+         StudentMarkAverage: "50",
+         StudentPass: true,
+         StudentFail: false,
+         image: "./assets/car2.webp"
+      },
+      {
+         id: 2,
+         label: "Company",
+         StudentName: "Owen",
+         StudentSurname: "Stork",
+         StudetnAge: "20",
+         StudentCourse: "Information Technology",
+         StudentNumberSubject: "12",
+         StudentMarkAverage: "50",
+         StudentPass: true,
+         StudentFail: false,
+         image: "./assets/car3.jpg"
+      },
+      {
+         id: 3,
+         label: "Company",
+         StudentName: "Stef",
+         StudentSurname: "Cock",
+         StudetnAge: "20",
+         StudentCourse: "Information Technology",
+         StudentNumberSubject: "12",
+         StudentMarkAverage: "50",
+         StudentPass: true,
+         StudentFail: false,
+         image: "./assets/car4.jpg"
+      },
+      {
+         id: 4,
+         label: "Company",
+         StudentName: "Adriano",
+         StudentSurname: "Manuel",
+         StudetnAge: "40",
+         StudentCourse: "Information Technology",
+         StudentNumberSubject: "12",
+         StudentMarkAverage: "50",
+         StudentPass: true,
+         StudentFail: false,
+         image: "./assets/car5.jpg"
+      },
+      {
+         id: 5,
+         label: "Company",
+         StudentName: "Peter",
+         StudentSurname: "Marcos",
+         StudetnAge: "20",
+         StudentCourse: "Information Technology",
+         StudentNumberSubject: "12",
+         StudentMarkAverage: "50",
+         StudentPass: true,
+         StudentFail: false,
+      },
+      {
+         id: 6,
+         label: "Company",
+         StudentName: "Jobs",
+         StudentSurname: "Steve",
+         StudetnAge: "30",
+         StudentCourse: "Information Technology",
+         StudentNumberSubject: "12",
+         StudentMarkAverage: "50",
+         StudentPass: true,
+         StudentFail: false,
+      },
+      {
+         id: 4,
+         label: "Company",
+         StudentName: "Marlon",
+         StudentSurname: "Brown",
+         StudetnAge: "20",
+         StudentCourse: "Information Technology",
+         StudentNumberSubject: "12",
+         StudentMarkAverage: "50",
+         StudentPass: true,
+         StudentFail: false,
+      },
+   ]
+
+   let dataPrev = document.getElementById("prev-doc").innerHTML = JSON.stringify(Students, undefined, 2);
+ 
+   console.log(Students);
+
+   let html = "<table border='1|1'>"
+
+   setTimeout(() => {
+      for (let i = 0; i < Students.length; i++) {
+         html += `<tr>`
+         html += '<td>' + Students[i].StudentName + '</td>';
+         html += '<td>' + Students[i].StudentSurname + '</td>';
+         html += '<td>' + Students[i].StudetnAge + '</td>';
+         html += '<td>' + Students[i].StudentCourse + '</td>'
+         html += '<td>' + Students[i].StudentNumberSubject + '</td>'
+         html += `</tr>`
+      }
+      document.getElementById("StudentNames").innerHTML = html
+   }, 500)
+}
+
+
+StudentCall()
+
+

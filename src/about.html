@@ -5,28 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../src/index.css">
-    <title>Javascript course 2</title>
+    <title>Javascript course </title>
 </head>
 <body>
-    
-    <form action="">
-        <div class="main-form">
-            <h2>Payment Process</h2>
-            <label id="lblFirstName" for="firstName">Name</label>
-            <input id="firstName" type="text" placeholder="Name">
-            <label id="lblLastName" for="lastName">Surname</label>
-            <input id="lastName" type="text" placeholder="Surname">
-            <h3>Payments</h3>
-            <div class="inputRadio">
-                <label id="lblVisa" for="paymentVisa">Visa</label>
-                <input id="paymentVisa" type="radio">
-                <label id="lblPaypal" for="paymentPaypal">Paypal</labe>
-                <input id="paymentPaypal" type="radio" >
-            </div>
-            <label id="lblError"></label>
+
+    <div class="main-block_prev">
+        <div class="lblPrev">
+            <pre  id="prev-doc"></pre>
         </div>
-        <input id="submitButton" class="btnSubmit" type="submit" value="submit">
-    </form>
+        <div class="blockPrev">
+            <div id="StudentNames"class="block_B">
+
+            </div>
+             <div class="block_A">
+                   <p>hI</p>
+             </div>
+             <div class="block_A">
+                  
+             </div>
+             <div class="block_A">
+
+             </div>
+             <div class="block_A">
+                <form action="">
+                    <div class="main-form">
+                        <h2>Payment Process</h2>
+                        <label id="lblFirstName" for="firstName">Name</label>
+                        <input id="firstName" type="text" placeholder="Name">
+                        <label id="lblLastName" for="lastName">Surname</label>
+                        <input id="lastName" type="text" placeholder="Surname">
+                        <label id="lblAge" for="lastName">Age</label>
+                        <label class="error_message" id="lblError2"></label>
+                        <input id="yourAge" type="text" placeholder="Your age">
+                        <h3>Payments</h3>
+                        <div class="inputRadio">
+                            <label id="lblVisa" for="paymentVisa">Visa</label>
+                            <input id="paymentVisa" type="radio">
+                            <label id="lblPaypal" for="paymentPaypal">Paypal</labe>
+                            <input id="paymentPaypal" type="radio" >
+                        </div>
+                        <label id="lblError"></label>
+                    </div>
+                    <input id="submitButton" class="btnSubmit" type="submit" value="submit">
+                </form>
+             </div>
+        </div>
+    </div>
+    
+   
 
     <script src="../src/index.js"></script>
 </body>
