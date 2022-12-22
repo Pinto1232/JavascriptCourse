@@ -198,23 +198,103 @@ const StudentCall = (e) => {
          StudentPass: true,
          StudentFail: false,
       },
+   ]
+
+   let dataPrev = document.getElementById("prev-doc").innerHTML = JSON.stringify(Students, undefined, 2);
+   console.log(Students);
+
+   let html = "<table border='1|1'>"
+
+   setTimeout(() => {
+      for (let i = 0; i < Students.length; i++) {
+         html += `<tbody>`
+         html += `<tr>`
+         html += '<td>' + Students[i].id + '</td>';
+         html += '<td>' + Students[i].StudentName + '</td>';
+         html += '<td>' + Students[i].StudentSurname + '</td>';
+         html += '<td>' + Students[i].StudetnAge + '</td>';
+         html += '<td>' + Students[i].StudentCourse + '</td>'
+         html += '<td>' + Students[i].StudentNumberSubject + '</td>'
+         html += `</tr>`
+         html += `</tbody>`
+      }
+      document.getElementById("StudentNames").innerHTML = html
+   }, 500)
+}
+
+
+const tableStudent = () => {
+   const Students = [
       {
-         id: 6,
+         id: 0,
          label: "Company",
-         StudentName: "Jobs",
-         StudentSurname: "Steve",
-         StudetnAge: "30",
+         StudentName: "Pinto",
+         StudentSurname: "Manuel",
+         StudetnAge: "20",
          StudentCourse: "Information Technology",
          StudentNumberSubject: "12",
          StudentMarkAverage: "50",
          StudentPass: true,
          StudentFail: false,
+         image: "./assets/car1.webp"
+      },
+      {
+         id: 1,
+         label: "Company",
+         StudentName: "Mascode",
+         StudentSurname: "Teresa",
+         StudetnAge: "20",
+         StudentCourse: "Information Technology",
+         StudentNumberSubject: "12",
+         StudentMarkAverage: "50",
+         StudentPass: true,
+         StudentFail: false,
+         image: "./assets/car2.webp"
+      },
+      {
+         id: 2,
+         label: "Company",
+         StudentName: "Owen",
+         StudentSurname: "Stork",
+         StudetnAge: "20",
+         StudentCourse: "Information Technology",
+         StudentNumberSubject: "12",
+         StudentMarkAverage: "50",
+         StudentPass: true,
+         StudentFail: false,
+         image: "./assets/car3.jpg"
+      },
+      {
+         id: 3,
+         label: "Company",
+         StudentName: "Stef",
+         StudentSurname: "Cock",
+         StudetnAge: "20",
+         StudentCourse: "Information Technology",
+         StudentNumberSubject: "12",
+         StudentMarkAverage: "50",
+         StudentPass: true,
+         StudentFail: false,
+         image: "./assets/car4.jpg"
       },
       {
          id: 4,
          label: "Company",
-         StudentName: "Marlon",
-         StudentSurname: "Brown",
+         StudentName: "Adriano",
+         StudentSurname: "Manuel",
+         StudetnAge: "40",
+         StudentCourse: "Information Technology",
+         StudentNumberSubject: "12",
+         StudentMarkAverage: "50",
+         StudentPass: true,
+         StudentFail: false,
+         image: "./assets/car5.jpg"
+      },
+      {
+         id: 5,
+         label: "Company",
+         StudentName: "Peter",
+         StudentSurname: "Marcos",
          StudetnAge: "20",
          StudentCourse: "Information Technology",
          StudentNumberSubject: "12",
@@ -224,27 +304,28 @@ const StudentCall = (e) => {
       },
    ]
 
-   let dataPrev = document.getElementById("prev-doc").innerHTML = JSON.stringify(Students, undefined, 2);
- 
-   console.log(Students);
-
-   let html = "<table border='1|1'>"
+   let html = "<table>"
 
    setTimeout(() => {
-      for (let i = 0; i < Students.length; i++) {
-         html += `<tr>`
-         html += '<td>' + Students[i].StudentName + '</td>';
-         html += '<td>' + Students[i].StudentSurname + '</td>';
-         html += '<td>' + Students[i].StudetnAge + '</td>';
-         html += '<td>' + Students[i].StudentCourse + '</td>'
-         html += '<td>' + Students[i].StudentNumberSubject + '</td>'
-         html += `</tr>`
-      }
-      document.getElementById("StudentNames").innerHTML = html
+        for (let i = 0; i < Students.length; i++) {
+         html+= '<table>'
+         html+= '<thead>'
+           html+= '<tr>'
+             html+= '<th>'+Students[i].label+'</th>'
+           html+= '</tr>'
+         html+= '</thead>'
+         html+= '<tbody>'
+           html+= '<tr>'
+             html+= '<td data-column="First Name">'+Students[i].StudentName+'</td>'
+           html+= '</tr>'
+         html+= '</tbody>'
+     html+= '</table>'
+
+        }
+        document.getElementById("blockA").innerHTML = html
    }, 500)
 }
 
-
 StudentCall()
-
+tableStudent()
 
