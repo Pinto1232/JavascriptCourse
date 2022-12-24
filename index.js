@@ -234,12 +234,14 @@ document.getElementById("SubmitGuessBtn2").onclick = (e) => {
         temp2 = Number(temp2)
         temp2 = convCelcius(temp2)
         document.getElementById("guess2").innerHTML = "Tempture is " + temp2 + ""
+        console.log(temp2);
     }
     else if (document.getElementById("fButton2").checked) {
         temp2 = document.getElementById("txtGuesses2").value;
         temp2 = Number(temp2)
         temp2 = convFahrenheit(temp2)
         document.getElementById("guess2").innerHTML = "Tempture is " + temp2 + " F"
+        console.log(temp2);
     }
     else {
         document.getElementById("guess3").innerHTML = "Please select a # from 0 to 10"
@@ -255,4 +257,33 @@ const convFahrenheit = (temp2) => {
     return temp2 * 9 / 5 + 32;
 }
 
+
+
+// switch = Statement that examines a value 
+//          for a match against many case clauses.
+//          More effecient then many "else if" statement
+
+let grade = 77;
+
+switch (true) {
+    case grade >= 90:
+        console.log("You did great");
+        break;
+    case grade >= 80:
+        console.log("You did good!");
+        break;
+    case grade >= 70:
+        console.log("You did okay!");
+        break;
+    case grade >= 60:
+        console.log("You passed ... barely");
+        break;
+    case grade > 60:
+        console.log("You FAILED!");
+        break;
+
+    default:
+        console.log("Is not a letter grade!");
+        break;
+}
 

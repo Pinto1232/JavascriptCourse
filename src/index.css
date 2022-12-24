@@ -59,7 +59,7 @@ form {
     color: white;
     padding: 20px;
     margin: 1px;
-    font-size: 18px;
+    font-size: 22px;
     border-radius: 4px 0px 0px 4px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     
@@ -81,17 +81,55 @@ form {
     color: black;
 }
 
+.deleteAddBlock{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+}
+.deleteAddBlock a{
+    column-gap: 10em;
+    text-decoration: none;
+    border: 2px solid;
+    margin-right: 10px;
+    color: white;
+    display: flex;
+    background-color: blue;
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-top: 10px;
+    padding-bottom: 10px; 
+    text-align: center;
+    font-size: 20px;
+    border: none;
+    border-radius: 4px;
+    align-items: center;
+    transition: all 0.15s ease-in;
+}
+
+.deleteAddBlock a:hover{
+    background-color: red;
+}
+
+
+.blockAdjacent{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
 .block_A {
     background-color: white;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     border-radius: 4px;
     margin: 20px;
+    padding: 12px;
 }
 
 .block_B {
     background-color: white;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-    height: 100vh;
+    height: 56vh;
     margin: 20px;
     color: black;
     padding: 10px;
@@ -99,6 +137,10 @@ form {
     font-size: 16px;
     column-gap: 4px;
     border-radius: 4px;
+}
+
+.txtDate{
+    width: 250px;
 }
 
 .block_B table {
@@ -122,7 +164,8 @@ form {
 table { 
 	width: 100%; 
 	border-collapse: collapse; 
-	margin:50px auto;
+	/* margin:50px auto; */
+    border-radius: 4px;
 	}
 
 /* Zebra striping */

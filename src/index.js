@@ -87,17 +87,18 @@ let btnSubmit = document.getElementById("submitButton").onclick = (event) => {
       document.getElementById("lblError").innerHTML = "You are paying with visa", paymentVisa;
       console.log("You are paying with visa");
    }
-   else if (paymentPaypal.checked) {
+   if (paymentPaypal.checked) {
       document.getElementById("lblError").innerHTML = "You are paying with paypal", paymentPaypal;
       console.log("You are paying with paypal");
+   }
+  
+   else {
+      document.getElementById("lblError").innerHTML = "Please select payment method"
+      console.log("Please select payment method");
    }
    if (myAge <= 18) {
       document.getElementById("lblError2").innerHTML = "Your age does not comply with requirement", myAge;
       console.log("Please insert a required age");
-   }
-   else {
-      document.getElementById("lblError").innerHTML = "Please select payment method"
-      console.log("Please select payment method");
    }
 
 }
@@ -322,10 +323,13 @@ const tableStudent = () => {
      html+= '</table>'
 
         }
-        document.getElementById("blockA").innerHTML = html
+        /* document.getElementById("blockA").innerHTML = html */
    }, 500)
 }
 
 StudentCall()
 tableStudent()
+
+
+
 
