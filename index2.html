@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        #search-overlay {
+            display: none;
+        }
+
+        .search-overlay-visible {
+            display: block;
+        }
+
+        #image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+        }
+
+        .grid-item {
+            position: relative;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        #image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+        }
+
+        /* Use a media query to change the number of columns on smaller screens */
+        @media (max-width: 800px) {
+            #image-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            #image-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        .grid-item {
+            position: relative;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        #emailError {
+            color: red;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="search-overlay">
+        <form>
+            <input type="text" placeholder="Search...">
+            <button type="submit">Go</button>
+        </form>
+    </div>
+    <button class="search-toggle">Show Search</button>
+
+    <div id="image-grid">
+        <div class="grid-item">
+            <img src="https://img.freepik.com/premium-photo/astronaut-outer-open-space-planet-earth-stars-provide-background-erforming-space-planet-earth-sunrise-sunset-our-home-iss-elements-this-image-furnished-by-nasa_150455-16829.jpg?w=2000"
+                alt="image1">
+        </div>
+        <div class="grid-item">
+            <img src="https://img.freepik.com/premium-photo/astronaut-outer-open-space-planet-earth-stars-provide-background-erforming-space-planet-earth-sunrise-sunset-our-home-iss-elements-this-image-furnished-by-nasa_150455-16829.jpg?w=2000"
+                alt="image2">
+        </div>
+        <div class="grid-item">
+            <img src="https://img.freepik.com/premium-photo/astronaut-outer-open-space-planet-earth-stars-provide-background-erforming-space-planet-earth-sunrise-sunset-our-home-iss-elements-this-image-furnished-by-nasa_150455-16829.jpg?w=2000"
+                alt="image2">
+        </div>
+        <!-- Add additional grid items for each image in the grid -->
+
+
+        <form onsubmit="return validateEmail()">
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required><br>
+            <div id="emailError"></div>
+            <input type="submit" value="Submit">
+        </form>
+
+
+    </div>
+
+
+    <script src="./jQuery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.search-toggle').click(function () {
+                $('#search-overlay').toggle();
+            });
+        });
+
+        $('.grid-item').hover(function () {
+            $(this).find('.caption').toggle();
+        });
+
+        // JavaScript
+        function validateEmail() {
+            let email = document.getElementById("email").value;
+            let re = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+            if (!re.test(email)) {
+                document.getElementById("emailError").innerHTML = "Please enter a valid email address.";
+                return false;
+            }
+            document.getElementById("emailError").innerHTML = "";
+            return true;
+        }
+
+
+
+    </script>
+</body>
+
+</html>

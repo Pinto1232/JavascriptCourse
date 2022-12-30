@@ -222,6 +222,7 @@ console.log("This student is", Enrolled);
 
 
 /* Guesses 2 */
+
 let temp2 = 45;
 document.getElementById("SubmitGuessBtn2").onclick = (e) => {
     e.preventDefault()
@@ -246,7 +247,6 @@ document.getElementById("SubmitGuessBtn2").onclick = (e) => {
     else {
         document.getElementById("guess3").innerHTML = "Please select a # from 0 to 10"
     }
-
 }
 
 const convCelcius = (temp2) => {
@@ -259,31 +259,164 @@ const convFahrenheit = (temp2) => {
 
 
 
-// switch = Statement that examines a value 
-//          for a match against many case clauses.
-//          More effecient then many "else if" statement
+// If statement - Is use in programming to make descision
 
-let grade = 77;
+let myTemp = 20
+let isItAGoodWheather = true
+
+
+if(myTemp == 20){
+    console.log("The wheather is good");
+}
+else if (myTemp == 0) {
+    console.log("It's very cold");
+}
+else if(isItAGoodWheather){
+    console.log("Is not a good wheather - You can't go outside");
+}
+else{
+    console.log("Bad decision to go outside");
+}
+
+
+
+
+
+
+// Arrays - Is used to store multiple value
+
+const Fruits = ["Banana", "Orange", "Avocado", "Peach", "Mango", "Apple"]
+Fruits.pop("Banana")
+console.log(Fruits);
+
+/* const myNumber = [0, 100, 2, 200, 300, 1000, 1020]
+console.log(myNumber.length);
+ */
+
+/* Switch case - Is used to make multiple decision  */
+
+
+let myGrade = 60;
 
 switch (true) {
-    case grade >= 90:
-        console.log("You did great");
+    case myGrade >= 90:
+        console.log("You pass with a greater mark");
         break;
-    case grade >= 80:
-        console.log("You did good!");
+    case myGrade >= 80:
+        console.log("You pass with a slight greater mark");
         break;
-    case grade >= 70:
-        console.log("You did okay!");
+    case myGrade >= 70:
+        console.log("You pass with base mark");
         break;
-    case grade >= 60:
-        console.log("You passed ... barely");
+    case myGrade >= 60:
+        console.log("You failed");
         break;
-    case grade > 60:
-        console.log("You FAILED!");
-        break;
-
     default:
-        console.log("Is not a letter grade!");
+     console.log("Please try again next year!");
         break;
 }
+
+
+// If Statement - Is used in programming to make decision
+
+let myTemp2 = -20
+
+if (myTemp2 == 20) {
+    console.log("The wheather is good outside");
+}
+else if (myTemp2 == 10) {
+    console.log("The wheather is cold outside");
+}
+else{
+    console.log("You can not go outside");
+}
+
+
+
+// Continue chat about arrays - Methods
+
+const animals = ['Pigs', 'Cows', 'Sheep', 'Eagle', 'Monkeys']
+console.log(animals);
+
+
+// Push
+/* const animal = animals.push('Leon', 'Leopard') */
+/* console.log(animal);
+
+console.log(animals); */
+
+// Pop
+/* let animal = animals.pop()
+console.log(animal); */
+
+// Shift
+/* let animal = animals.shift()
+console.log(animal); */
+
+
+// unshift
+
+const animalName = animals.unshift('1', '2', 3, '4', 5)
+/* console.log(animalName);
+
+console.log(animals);  */
+
+/* animals.forEach(element => {
+    console.log(element);
+}); */
+
+/* for (let i = 0; i < animals.length; i++) {
+    const lblElement = animals[i];
+    console.log(lblElement);
+} */
+
+
+/* for (const animal of animals) {
+    console.log(animal);
+} */
+
+console.log(animals);
+
+let temps = 28
+let sunny = false
+
+if (temps > 0 && temps < 30) {
+    console.log("The weather is good!");
+} else {
+    console.log("The weather is bad!");
+}
+if (sunny) {
+    console.log('Its sunny outside');
+}
+else{
+    console.log('Its cloudy outside');
+}
+
+
+/* function showSearchBar() {
+    const searchBar = document.getElementById("search-bar");
+    searchBar.classList.remove("hidden");
+  }
+
+  const hideButton = document.getElementById("hide-button");
+  hideButton.addEventListener("click", function() {
+    searchBar.classList.add("hidden");
+  }); */
+
+
+
+// Get the navbar
+const navbar = document.querySelector('nav');
+
+// Create the hamburger menu button
+const hamburgerButton = document.createElement('button');
+hamburgerButton.innerHTML = '<i class="fas fa-bars"></i>';
+
+// Add the hamburger menu button to the navbar
+navbar.appendChild(hamburgerButton);
+
+// Add an event listener to the hamburger menu button
+hamburgerButton.addEventListener('click', () => {
+  // Toggle the dropdown menu
+  navbar.querySelector('ul').classList.toggle('
 

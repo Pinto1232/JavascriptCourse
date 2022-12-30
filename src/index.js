@@ -308,8 +308,8 @@ const tableStudent = () => {
    let html = "<table>"
 
    setTimeout(() => {
-        for (let i = 0; i < Students.length; i++) {
-         html+= '<table>'
+      for (let i = 0; i < Students.length; i++) {
+      html+= '<table>'
          html+= '<thead>'
            html+= '<tr>'
              html+= '<th>'+Students[i].label+'</th>'

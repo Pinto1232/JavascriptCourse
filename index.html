@@ -5,11 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIrCbgItq2O5yh20fvLMAZ5XxPqfR7MG3Ikn14ZO2BbpMF+GXQcAov2bhjW+KWSeEVhQ==" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
     <title>Javascript Tutorial</title>
 </head>
 
 <body>
+    <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <button>
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+      
+      
 
     <div class="form-block">
         <div class="checkMore">
@@ -39,7 +52,16 @@
 
 
         <div class="payment">
-            <h2 class="txtPayment">Payment method</h2>
+            <div class="format-div">
+                <div>
+                    <h2 class="txtPayment">Payment method</h2>
+                </div>
+
+                <div>
+                 
+                </div>
+            </div>
+
 
             <div class="block-payment">
                 <label for="visaPayment">Visa Payments</label>
@@ -75,31 +97,26 @@
                 <label class="lblguess2" id="guess2"></label>
                 <label class="lblguess3" id="guess3"></label>
             </div>
-
             <input id="SubmitGuessBtn2" value="submit" type="submit">
+        </form>
+        <label id="lblList"></label>
+    </div>
+
+       <!-- HTML for the search bar -->
+       <div class="search-bar">
+        <form>
+            <input type="text" placeholder="Search..." id="search-input">
+            <button type="submit" id="search-button">Search</button>
         </form>
     </div>
 
+    <!-- HTML for the overlay -->
+    <div class="overlay">
+        <!-- Overlay content goes here -->
+    </div>
 
-    <!-- Executable form  -->
-    <select name="" id="main-executable-form">
-         <h2 class="txtExecutable">Executable Form</h2>
-         <div class="Form-Executable">
-              <input type="text" placeholder="Hold Executable">
-              <input type="text" placeholder="Hold Executable2">
-              <input type="text" placeholder="Hold Executable3">
-              <input type="text" placeholder="Hold Executable4">
-              <input type="text" placeholder="Hold Executable5">
-              <input type="text" placeholder="Hold Executable6">
-              <input type="text" placeholder="Hold Executable7">
-              <input type="text" placeholder="Hold Executable8">
-              <input type="text" placeholder="Hold Executable9">
-              <input type="text" placeholder="Hold Executable10">
-              <input type="text" placeholder="Hold Executable11">
-              <input type="text" placeholder="Hold Executable12">z
-         </div>
-    </select>
-    <!--End Executable form  -->
+
+
 
 
     <script src="index.js"></script>

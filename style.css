@@ -1,23 +1,24 @@
-.form-block{
+.form-block {
     display: flex;
     justify-content: center;
     flex-direction: column;
     background-color: #11114e;
     padding: 50px;
     margin: 10 auto;
-    border-radius:4px;
+    border-radius: 4px;
 }
-.form-block input{
+
+.form-block input {
     margin-top: 10px;
     padding: 15px;
     outline: none;
     border: none;
 }
-.block-payment
-.btnSumit {
+
+.block-payment .btnSumit {
     margin-top: 10px;
     padding: 10px;
-    background-color: blue; 
+    background-color: blue;
     color: white;
     font-size: 20px;
     border: none;
@@ -25,8 +26,9 @@
     width: 400px;
     max-width: 100%;
 }
+
 @media (max-width: 768px) {
-    .btnSumit{
+    .btnSumit {
         width: 100%;
         display: inline-block;
         justify-content: center;
@@ -41,21 +43,21 @@ label {
     font-weight: bold;
 }
 
-.txtEmployee{
+.txtEmployee {
     color: white;
     text-transform: capitalize;
     font-size: 45px;
     font-weight: bold;
 }
 
-.checkMore{
+.checkMore {
     display: flex;
     align-items: center;
     justify-content: space-between;
     column-gap: 20px;
 }
 
-.checkMore .btnLearMore{
+.checkMore .btnLearMore {
     padding: 10px;
     font-size: 20px;
     background-color: blue;
@@ -68,17 +70,18 @@ label {
 }
 
 @media (max-width: 768px) {
-    .checkMore{
+    .checkMore {
         display: flex;
         flex-direction: column;
         text-align: center;
     }
 }
 
-.txtPayment{
+.txtPayment {
     color: white;
 }
-.payment{
+
+.payment {
     gap: 20px;
 }
 
@@ -88,46 +91,48 @@ label {
     margin-top: 30px;
     padding: 20px;
     border-radius: 5px;
- 
+
     box-shadow: rgba(23px 20px, 23px 20px, 23px, 0.5%);
 }
-.form-game2 h2{
+
+.form-game2 h2 {
     font-size: 40px;
 }
 
-.form-game2 p{
+.form-game2 p {
     font-size: 20px;
 }
 
-.degreeConversion{
+.degreeConversion {
     display: flex;
     width: max-content;
     margin-bottom: 20px;
 }
 
-.degreeConversion .lbldegree{
+.degreeConversion .lbldegree {
     color: #000;
 }
 
-.txtBlock2{
+.txtBlock2 {
     display: flex;
     flex-direction: column;
 }
-.txtBlock2 .lbldegree{
+
+.txtBlock2 .lbldegree {
     color: #000;
 }
 
-.txtBlock2 input{
+.txtBlock2 input {
     height: 15px;
     background-color: gainsboro;
 }
 
-.form-game2 .max-width2{
+.form-game2 .max-width2 {
     width: 465px;
     width: 100%;
 }
 
-.form-game2  input{
+.form-game2 input {
     width: 465px;
     width: 95%;
 }
@@ -144,6 +149,7 @@ label {
     border-radius: 4px;
     cursor: pointer;
 }
+
 @media (max-width: 768px) {
     .form-game2 #SubmitGuessBtn2 {
         display: flex;
@@ -153,20 +159,97 @@ label {
     }
 }
 
-.degreeConversion2{
+.degreeConversion2 {
     display: flex;
     width: max-content;
     margin-bottom: 20px;
 }
 
-.degreeConversion2 .lbldegree{
+.degreeConversion2 .lbldegree {
     color: #000;
 }
 
-.lblguess2{
-   color: black;
+.lblguess2 {
+    color: black;
 }
 
-.lblguess3{
+.lblguess3 {
     color: red;
 }
+
+
+/* Add some basic styling for the navbar */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #333;
+    color: #fff;
+    z-index: 1000;
+  }
+  
+  /* Style the navbar links */
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin: 0 10px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  /* Add a breakpoint at 800px to make the navbar responsive */
+  @media screen and (max-width: 800px) {
+    /* Change the flex direction of the links to display them in a column */
+    nav ul {
+      flex-direction: column;
+      /* Add a dropdown menu when the screen size is 800px or smaller */
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #333;
+      width: 100%;
+      /* Hide the dropdown menu by default */
+      display: none;
+    }
+    nav li {
+      margin: 0;
+      border-top: 1px solid #444;
+    }
+    nav a {
+      display: block;
+      padding: 20px;
+    }
+    /* Style the hamburger menu button */
+    nav button {
+      display: block;
+      background-color: transparent;
+      border: 0;
+      color: #fff;
+      padding: 10px;
+      cursor: pointer;
+    }
+    nav button i {
+      font-size: 24px;
+    }
+  }
+  
+  /* Add a transition effect when the dropdown menu is shown or hidden */
+  nav ul.show {
+    display: flex;
+    transition: all 0.3s ease-in-out;
+  }
+  
